@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Web;
 using ComicBookGallery.Models;
 
@@ -59,6 +60,13 @@ namespace ComicBookGallery.Data
                 Favourite = false
                 }       
         };
+
+        
+        public ComicBook[] GetComicBooks()
+        {
+            return _comicBooks;
+        }
+
 
         public ComicBook GetComicBook(int id)
         {
